@@ -66,7 +66,6 @@ public class DateTime
 		try {
 			midnight = new Time12(12, 0, AmPm.am);
 		} catch (InvalidTimeException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if (!consecutive) {

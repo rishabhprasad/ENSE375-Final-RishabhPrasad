@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.uregina.app.Time12Test" time="0.008" tests="11" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.uregina.app.Time12Test" time="0.016" tests="11" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="15"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CA"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\risha\AppData\Local\Temp\surefire14349211093550224440\surefirebooter6823916613008910809.jar C:\Users\risha\AppData\Local\Temp\surefire14349211093550224440 2021-04-27T15-15-17_729-jvmRun1 surefire12447262220661023701tmp surefire_01887863573944186620tmp"/>
+    <property name="sun.java.command" value="C:\Users\risha\AppData\Local\Temp\surefire6002176674714750429\surefirebooter6356049243882855218.jar C:\Users\risha\AppData\Local\Temp\surefire6002176674714750429 2021-04-27T17-06-12_980-jvmRun1 surefire10954537696676085301tmp surefire_012638367713995087725tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\risha\Documents\GitHub\ENSE375-Final-RishabhPrasad\ENSE375-exam\target\test-classes;C:\Users\risha\Documents\GitHub\ENSE375-Final-RishabhPrasad\ENSE375-exam\target\classes;C:\Users\risha\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\risha\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\risha\AppData\Local\Temp\surefire14349211093550224440\surefirebooter6823916613008910809.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\risha\AppData\Local\Temp\surefire6002176674714750429\surefirebooter6356049243882855218.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="15.0.2+7-27"/>
@@ -55,15 +55,15 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="59.0"/>
   </properties>
-  <testcase name="T1PM_T2MinsBetween0and30" classname="com.uregina.app.Time12Test" time="0"/>
+  <testcase name="T1PM_T2MinsBetween0and30" classname="com.uregina.app.Time12Test" time="0.001"/>
   <testcase name="T1PM_T2PM" classname="com.uregina.app.Time12Test" time="0"/>
   <testcase name="T1Am_T2Am" classname="com.uregina.app.Time12Test" time="0"/>
   <testcase name="T1Am_T2Pm" classname="com.uregina.app.Time12Test" time="0"/>
   <testcase name="T1Am_T2Minsbetween31and59" classname="com.uregina.app.Time12Test" time="0"/>
-  <testcase name="T1PM_T2HoursBetween1and6" classname="com.uregina.app.Time12Test" time="0"/>
+  <testcase name="T1PM_T2HoursBetween1and6" classname="com.uregina.app.Time12Test" time="0.001"/>
   <testcase name="T1Am_T2Minsbetween0and30" classname="com.uregina.app.Time12Test" time="0"/>
   <testcase name="T1PM_T2MinsBetween31and59" classname="com.uregina.app.Time12Test" time="0"/>
-  <testcase name="T1PM_T2HoursBetween7and12" classname="com.uregina.app.Time12Test" time="0.001"/>
+  <testcase name="T1PM_T2HoursBetween7and12" classname="com.uregina.app.Time12Test" time="0"/>
   <testcase name="T1Am_T2Hoursbetween7and12" classname="com.uregina.app.Time12Test" time="0"/>
-  <testcase name="T1Am_T2Hoursbetween1and6" classname="com.uregina.app.Time12Test" time="0"/>
+  <testcase name="T1Am_T2Hoursbetween1and6" classname="com.uregina.app.Time12Test" time="0.001"/>
 </testsuite>
