@@ -34,6 +34,7 @@ public class DateTime
 	{
 		return date;
 	}
+
 	/**
 	 * subtract two DateTimes
 	 * @param  d1	a DateTime object (MM/DD/YYYY  hh:mm am/pm)
@@ -41,7 +42,7 @@ public class DateTime
 	 * @return 		the value of (d1-d2) in minutes
 	 * 				it may be a negative value
 	 *				Throws MoreThanOneDayException if d1,d2 are not at the same date or
-	 * 						not a consequative days.
+	 * 						not a consecutive days.
 	 * usefeul functions that you may use
 	 * 		(class: Date , method: equal)
 	 * 		(class: Time12 , method: subtract)
@@ -50,9 +51,31 @@ public class DateTime
 	public static int subtract(DateTime d1,DateTime d2) throws MoreThanOneDayException
 	{
 		int diff=0;
-		//Todo: add your code here
+		
+		Date nextDate = d2.date.nextDate();
+		boolean consecutive = Date.equal(d1.date, nextDate);
 
-		//end of your code
+		// Throw Exception if dates are neither consecutive or equal
+		if (!Date.equal(d1.date, d2.date)) {
+			if (!consecutive) {
+				throw new MoreThanOneDayException();
+			}
+		}
+
+		Time12 midnight = null;
+		try {
+			midnight = new Time12(12, 0, AmPm.am);
+		} catch (InvalidTimeException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if (!consecutive) {
+			diff = Time12.subtract(d1.time, d2.time);
+		} else {
+			diff = Time12.subtract(midnight, d2.time);
+			diff += Time12.subtract(d1.time, midnight);
+		}
+
 		return diff;
 	}
 	/**
