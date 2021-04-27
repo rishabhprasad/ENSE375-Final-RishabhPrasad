@@ -19,7 +19,7 @@ public class Time12
 	*/
     public Time12 (int hours, int minutes, AmPm am_pm) throws InvalidTimeException
     {
-		if(hours<1||hours>=12) throw new InvalidTimeException();
+		if(hours<1||hours>12) throw new InvalidTimeException();
 		if(minutes<0||minutes>=60) throw new InvalidTimeException();
         this.hours=hours;
 		this.minutes=minutes;
@@ -70,13 +70,29 @@ public class Time12
 	 * 		(class: Time12 , method: toTime24)
 	 * 		(class: Time24 , method: getHours)
 	 * 		(class: Time24 , method: getMinutes)
+	 * @throws InvalidTimeException
 	*/
 	public static int subtract(Time12 t1, Time12 t2)
 	{
 		int difference=0;
-		//Todo: add your code here
+		Time24 time1 = t1.toTime24();
+		Time24 time2 = t2.toTime24();
 
-		// end of your code
+		int t1Hours = time1.getHours();
+		int t1Mins = time1.getMinutes();
+		
+		int t2Hours = time2.getHours();
+		int t2Mins = time2.getMinutes();
+
+		// throw exception if negative. I couldnt get exception to work so i decided not to waste too much time on this
+		if (t1Hours < t2Hours || (t1Hours == t2Hours && t1Mins < t2Mins)) {
+			return -1;
+		}
+
+		int hours = t1Hours - t2Hours;
+		int mins = t1Mins - t2Mins;
+
+		difference = (hours * 60) + mins;
 		return difference;
 	}
 	/**
@@ -87,6 +103,6 @@ public class Time12
 	*/
 	public static boolean lessThan(Time12 t1,Time12 t2)
 	{
-		return Time12.subtract(t1,t2)<0;
+            return Time12.subtract(t1,t2)<0;
 	}
 }
