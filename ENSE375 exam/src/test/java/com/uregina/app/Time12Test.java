@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class Time12Test 
 {
     /**
      * Rigorous Test :-)

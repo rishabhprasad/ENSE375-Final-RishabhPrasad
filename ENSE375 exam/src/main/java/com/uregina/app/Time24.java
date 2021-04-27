@@ -46,17 +46,15 @@ public class Time24
 	 * @see 	https://www.freecodecamp.org/news/mathematics-converting-am-pm-to-24-hour-clock/
 	 * @note	(12 am and 12 pm are special cases)
 	 */
-	public static Time24 toTime24(int hours, int minutes, AmPm am_pm) throws InvalidTimeException
+	public static Time24 toTime24(int hours, int minutes, AmPm am_pm)
 	{
-		Time24 time=null;
-
 		int hour24 = 0;
 
 		if (am_pm == AmPm.pm) {
 			if (hours == 12) {
 				hour24 = 12;
 			} else {
-				hour24 += 12;
+				hour24 = hours + 12;
 			}
 		} 
 
@@ -68,7 +66,13 @@ public class Time24
 			}
 		}
 
-		time = new Time24(hour24, minutes);
+		Time24 time = null;
+
+		try {
+			time = new Time24(hour24, minutes);
+		} catch (InvalidTimeException e) {
+			return time;
+		}
 
 		return time;
 	}
