@@ -36,22 +36,40 @@ public class Time24
 	}
 	/**
 	 * Convert time 12-hour to 24-hour
-	 * @param  houra		hours in 12-hour time format (1:12)
-	 * @param  minutea	minutes in 24-hour time format (0:59)
+	 * @param  hours		hours in 12-hour time format (1:12)
+	 * @param  minutes	minutes in 24-hour time format (0:59)
 	 * @param  am_pm	enumerator with the value of am or pm
 	 * @return 		An equavalent Time24 object
 	 * 				a null for invalid input parameters
 	 * 				No exception should be thrown
+	 * @throws InvalidTimeException
 	 * @see 	https://www.freecodecamp.org/news/mathematics-converting-am-pm-to-24-hour-clock/
 	 * @note	(12 am and 12 pm are special cases)
 	 */
-	public static Time24 toTime24(int hours, int minutes, AmPm am_pm)
+	public static Time24 toTime24(int hours, int minutes, AmPm am_pm) throws InvalidTimeException
 	{
 		Time24 time=null;
-		//Todo : add your code here
 
+		int hour24 = 0;
 
-		// End of your code
+		if (am_pm == AmPm.pm) {
+			if (hours == 12) {
+				hour24 = 12;
+			} else {
+				hour24 += 12;
+			}
+		} 
+
+		if (am_pm == AmPm.am) {
+			if (hours == 12) {
+				hour24 = 0;
+			} else {
+				hour24 = hours;
+			}
+		}
+
+		time = new Time24(hour24, minutes);
+
 		return time;
 	}
 	/**
