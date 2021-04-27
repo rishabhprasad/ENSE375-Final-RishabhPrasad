@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.uregina.app.Time12Test" time="0.008" tests="11" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.uregina.app.DateTest" time="0.007" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="15"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -55,15 +55,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="59.0"/>
   </properties>
-  <testcase name="T1PM_T2MinsBetween0and30" classname="com.uregina.app.Time12Test" time="0"/>
-  <testcase name="T1PM_T2PM" classname="com.uregina.app.Time12Test" time="0"/>
-  <testcase name="T1Am_T2Am" classname="com.uregina.app.Time12Test" time="0"/>
-  <testcase name="T1Am_T2Pm" classname="com.uregina.app.Time12Test" time="0"/>
-  <testcase name="T1Am_T2Minsbetween31and59" classname="com.uregina.app.Time12Test" time="0"/>
-  <testcase name="T1PM_T2HoursBetween1and6" classname="com.uregina.app.Time12Test" time="0"/>
-  <testcase name="T1Am_T2Minsbetween0and30" classname="com.uregina.app.Time12Test" time="0"/>
-  <testcase name="T1PM_T2MinsBetween31and59" classname="com.uregina.app.Time12Test" time="0"/>
-  <testcase name="T1PM_T2HoursBetween7and12" classname="com.uregina.app.Time12Test" time="0.001"/>
-  <testcase name="T1Am_T2Hoursbetween7and12" classname="com.uregina.app.Time12Test" time="0"/>
-  <testcase name="T1Am_T2Hoursbetween1and6" classname="com.uregina.app.Time12Test" time="0"/>
+  <testcase name="D1Day1Month5Year1990_D2Day16Month1Year2020" classname="com.uregina.app.DateTest" time="0"/>
+  <testcase name="D1Day16Month7Year1990_D2Day1Month7Year2020" classname="com.uregina.app.DateTest" time="0"/>
+  <testcase name="D1Day16Month1Year2020_D2Day1Month1Year1990" classname="com.uregina.app.DateTest" time="0"/>
+  <testcase name="D1Day1Month7Year2020_D2Day16Month1Year1990" classname="com.uregina.app.DateTest" time="0"/>
+  <testcase name="D1Day16Month1Year2020_D2Day16Month1Year2020" classname="com.uregina.app.DateTest" time="0"/>
 </testsuite>
