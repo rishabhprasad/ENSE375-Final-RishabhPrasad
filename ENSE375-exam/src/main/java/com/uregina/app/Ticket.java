@@ -34,13 +34,55 @@ public class Ticket
 	 * 		(class: Flight , method: calculateFlightTime)
 	 * 		(class: Flight , method: calculateLayoverTime)
 	 * 		(class: ticket , method: hasCyclicTrip)
+	 * @throws NegativeTimeException
+	 * @throws MoreThanOneDayException
 	*/
 	public static boolean checkTicket( ArrayList<Flight> ticket, int maxFlightsCount, int maxFlightTime, int maxLayoverTime, boolean hasSchengenVisa)
 	{
-		//Todo: add your code here
-		
+		// for (Flight f : ticket) {
+		// 	if (f.getArrivalAirport().length() != 3) {
+		// 		return false;
+		// 	}
 
-		//end of your code
+		// 	if (f.getDepatureAirport().length() != 3) {
+		// 		return false;
+		// 	}
+		// 	char[] arrAirport = f.getArrivalAirport().toCharArray();
+		// 	char[] depAirport = f.getDepatureAirport().toCharArray();
+		// 	for (int i = 0; i < 3; i++) {
+		// 		if(!Character.isUpperCase(arrAirport[i]) || !Character.isUpperCase(depAirport[i])) {
+		// 			return false;
+		// 		}
+		// 	}
+
+		// 	if (f.getArrivalAirport().contains(f.getDepatureAirport())) {
+		// 		return false;
+		// 	}
+
+		// 	if (maxFlightTime > f.calculateFlightTime()) {
+		// 		return false;
+		// 	}
+
+		// 	boolean Schengen1 = false;
+		// 	boolean Schengen2 = false;
+		// 	for (int i = 0; i < SchengenAirportsCode.length; i++) {
+		// 		if (f.getArrivalAirport().contains(SchengenAirportsCode[i])) {
+		// 			Schengen1 = true;	
+		// 		}
+		// 		if (f.getDepatureAirport().contains(SchengenAirportsCode[i])) {
+		// 			Schengen2 = true;
+		// 		}
+		// 	}
+
+		// 	if (Schengen1 && Schengen2 && !hasSchengenVisa) {
+		// 		return false;
+		// 	}
+		// }
+
+		// if (!(maxFlightsCount <= ticket.size())) {
+		// 	return false;
+		// }
+
 		return true;
 	}
 		/**

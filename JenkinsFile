@@ -1,7 +1,7 @@
 pipeline {
 
     environment {
-        registry = "rishabhprasad03/ense375group-a"
+        registry = "rishabhprasad03/ense375-final-rishabhprasad"
         registryCredential = 'dockerhub'
         dockerImage = '';
     }
@@ -29,6 +29,23 @@ pipeline {
             }
         }
         
+        stage('Building image') {
+            steps{
+                script {
+                    dockerImage = docker.build registry
+                }
+            }
+        }
+
+        stage('Deploy image') {
+            steps{
+                script {
+                    docker.withRegistry( '', registryCredential) {
+                        dockerImage.push()
+                    }
+                }
+            }
+        }
     }
 
 }
